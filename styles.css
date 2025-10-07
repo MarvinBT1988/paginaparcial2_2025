@@ -1,32 +1,45 @@
 /* styles.css - extraído desde index.html */
+/* Paleta moderna */
 :root{
-  --bg: #35e3f0;
-  --text: #15181a;
-  --muted: #84898d;
+  --bg-gradient: linear-gradient(135deg, #35e3f0 0%, #a8edea 100%);
+  --card-bg: #fff;
+  --text: #222;
+  --muted: #35e3f0;
+  --shadow: 0 4px 16px rgba(52, 152, 219, 0.10);
+  --border-radius: 16px;
+  --primary: #35e3f0;
+  --secondary: #a8edea;
 }
 body {
-  font-family: Arial, sans-serif;
-  background-color: var(--bg);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: var(--bg-gradient);
   text-align: center;
-  padding-top: 50px;
+  padding-top: 40px;
   margin: 0;
+  min-height: 100vh;
 }
-h1 {
+h1, h2, h3 {
   color: var(--muted);
   margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 .header-img {
   width: 100%;
   height: auto;
   display: block;
   margin-bottom: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }
-.small-img {
-  max-width: 320px;
+.small-img, .little-img {
+  max-width: 260px;
   width: 80vw;
   height: auto;
   margin: 0 auto 10px auto;
   display: block;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }
 nav {
   margin-bottom: 30px;
@@ -42,9 +55,14 @@ nav ul li a {
   color: var(--text);
   font-weight: bold;
   font-size: 18px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
 }
 nav ul li a:hover {
-  color: #1b1c1d;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.08);
 }
 /* Responsive small screens */
 @media (max-width: 480px) {
@@ -58,8 +76,10 @@ nav ul li a:hover {
 /* Menu debajo de la imagen */
 .below-image {
   margin-top: 12px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.10);
   padding: 8px 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
 }
 .below-image ul {
   display: inline-flex;
@@ -67,33 +87,42 @@ nav ul li a:hover {
 }
 
 /* Perfiles */
+
 #perfiles {
-  padding: 24px 16px;
+  padding: 32px 16px;
 }
 .perfiles {
   display: flex;
-  gap: 20px;
+  gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 .perfil-card {
-  background: rgba(255,255,255,0.9);
-  padding: 14px;
-  border-radius: 8px;
-  width: 260px;
+  background: var(--card-bg);
+  padding: 18px 16px 24px 16px;
+  border-radius: var(--border-radius);
+  width: 240px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 12px;
+}
+.perfil-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(52,152,219,0.18);
 }
 .perfil-card .preview {
-  width: 96px;
-  height: 96px;
+  width: 90px;
+  height: 90px;
   margin: 0 auto 8px;
   overflow: hidden;
   border-radius: 50%;
-  background: #fff;
+  background: var(--secondary);
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.10);
 }
 .perfil-card .preview img {
   width: 100%;
@@ -103,22 +132,63 @@ nav ul li a:hover {
 }
 .perfil-card input[type="file"] {
   margin-top: 8px;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  padding: 4px;
+  background: #f7f7f7;
 }
 
+/* Tarjetas de APIs */
+.apis-section {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.api-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 18px 16px;
+  width: 240px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.api-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(52,152,219,0.18);
+}
+.api-card img {
+  max-width: 120px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+}
+.api-card a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.api-card a:hover {
+  background: var(--secondary);
+  color: var(--text);
+}
+
+
 @media (max-width:600px) {
-  .perfiles {
+  .perfiles, .apis-section {
     flex-direction: column;
     align-items: center;
   }
-  .perfil-card {
+  .perfil-card, .api-card {
     width: 90%;
   }
 }
-  .perfiles {
-    flex-direction: column;
-    align-items: center;
-  }
-  .perfil-card {
-    width: 90%;
-  }
 
