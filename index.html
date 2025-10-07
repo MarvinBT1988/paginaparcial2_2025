@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Variedades Patriz - tienda en línea: compras, contacto e información sobre nuestros servicios.">
-  <title>Sistemas Expertos</title>
+  <title>Variedades Patriz - tienda en línea</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate icon" href="/favicon.svg">
   <meta name="theme-color" content="#35e3f0">
@@ -23,10 +23,27 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <h1>SEGUNDO PARCIAL</h1>
-  <!-- Imagen en el encabezado -->
-  <img src="Imagenes/benner.jpg" alt="Sistemas Expertos" class="header-img">
-  
+  <!-- Sección de perfiles al inicio -->
+  <section id="perfiles">
+    <h2>Perfiles - Subir foto</h2>
+    <div class="perfiles">
+      <a href="https://api1.example.com" target="_blank" class="perfil-card">
+        <div class="preview"><img id="preview1" src="/perfil-alice.svg" alt="Preview 1"></div>
+        <h3>Alice Pérez</h3>
+        <input type="file" id="file1" accept="image/*">
+      </a>
+      <a href="https://api2.example.com" target="_blank" class="perfil-card">
+        <div class="preview"><img id="preview2" src="/perfil-bob.svg" alt="Preview 2"></div>
+        <h3>Bob Ramírez</h3>
+        <input type="file" id="file2" accept="image/*">
+      </a>
+    </div>
+  </section>
+
+  <h1>SEGUNDO PARCIAL DE SISTEMAS EXPERTOS UTILIZANDO APIs</h1>
+  <!-- Imagen en el encabezado (más pequeña) -->
+  <img src="Imagenes/banner.jpg" alt="Sistemas Expertos" class="header-img small-img">
+
   <!-- Menú / Índice (debajo de la imagen) -->
   <nav class="below-image">
     <ul>
@@ -36,7 +53,6 @@
     </ul>
   </nav>
 
-  <p>Compras Online</p>
   <!-- Secciones para el menú -->
   <main>
   <section id="inicio">
@@ -45,29 +61,12 @@
   </section>
   <section id="contacto">
     <h2>Contacto</h2>
-    <p>Contáctanos al correo: info@variedadespatriz.com</p>
+    <p>Contáctanos al correo: apis@unab.edu.sv</p>
   </section>
   <section id="acerca">
     <h2>Acerca de</h2>
-    <p>Somos Variedades Patriz, tu tienda de confianza.</p>
+    <p>Una API (Interfaz de Programación de Aplicaciones) es un conjunto de reglas y protocolos que permite que dos aplicaciones se comuniquen y compartan información de forma eficiente, actuando como un "puente" o un "contrato" para la interacción de software. En la tecnología, las APIs permiten a los desarrolladores utilizar funcionalidades existentes en otras aplicaciones sin necesidad de crear código desde cero, simplificando el desarrollo y fomentando la innovación. Existen diferentes tipos de APIs, como las privadas (para uso interno), las de socios (para colaboradores externos) y las públicas (disponibles para todos), y son cruciales para la infraestructura moderna, como las aplicaciones móviles y la gestión en la nube.</p>
   </section>
-  
-  <section id="perfiles">
-    <h2>Perfiles - Subir foto</h2>
-    <div class="perfiles">
-      <div class="perfil-card">
-        <div class="preview"><img id="preview1" src="/perfil-alice.svg" alt="Preview 1"></div>
-        <h3>Alice Pérez</h3>
-        <input type="file" id="file1" accept="image/*">
-      </div>
-      <div class="perfil-card">
-        <div class="preview"><img id="preview2" src="/perfil-bob.svg" alt="Preview 2"></div>
-        <h3>Bob Ramírez</h3>
-        <input type="file" id="file2" accept="image/*">
-      </div>
-    </div>
-  </section>
-  </main>
 
   <script>
     // Vista previa de imágenes para los dos perfiles
@@ -82,8 +81,14 @@
       reader.readAsDataURL(file);
     }
 
-    document.getElementById('file1').addEventListener('change', function(){ previewFile(this, 'preview1'); });
-    document.getElementById('file2').addEventListener('change', function(){ previewFile(this, 'preview2'); });
+    document.getElementById('file1').addEventListener('change', function(e){
+      e.stopPropagation();
+      previewFile(this, 'preview1');
+    });
+    document.getElementById('file2').addEventListener('change', function(e){
+      e.stopPropagation();
+      previewFile(this, 'preview2');
+    });
   </script>
 </body>
-</html
+</html>
