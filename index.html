@@ -3,51 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Variedades Patriz - tienda en línea: compras, contacto e información sobre nuestros servicios.">
-  <title>Sistemas Expertos-Parcial 2</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="alternate icon" href="/favicon.svg">
+  <meta name="description" content="Proyecto de Sistemas Expertos - Segundo Parcial">
+  <title>Sistemas Expertos - Segundo Parcial</title>
+  <link rel="icon" type="image/png" href="imagenes/favicon.png">
   <meta name="theme-color" content="#35e3f0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Sistemas Expertos">
-  <meta property="og:description" content="Compras Online - Variedades Patriz: contacto e información de la tienda.">
-  <meta property="og:image" content="/imagenes/banner.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Variedades Patriz - Sistemas Expertos">
-  <meta name="twitter:description" content="Compras Online - Variedades Patriz: contacto e información de la tienda.">
-  <meta name="twitter:image" content="/imagenes/banner.png">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sistemas Expertos - Proyecto API">
+  <meta property="og:description" content="Uso de APIs públicas y personalizadas para resolver problemas reales.">
+  <meta property="og:image" content="imagenes/banner.png">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Archivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Encabezado principal -->
   <header>
-    <img src="imagenes/benner.jpg" alt="Sistemas Expertos" class="header-img little-img">
-    <h1>Segundo Parcial de Sistemas Expertos utilizando APIs</h1>
-    <nav class="below-image">
+    <img src="imagenes/benner.jpg" alt="Banner principal">
+    <h1>Segundo Parcial - Sistemas Expertos con APIs</h1>
+    <nav>
       <ul>
         <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
         <li><a href="#perfiles"><i class="fas fa-users"></i> Integrantes</a></li>
         <li><a href="#apis"><i class="fas fa-cogs"></i> APIs</a></li>
-        <li><a href="#acerca"><i class="fas fa-info-circle"></i> Acerca de</a></li>
+        <li><a href="#acerca"><i class="fas fa-info-circle"></i> Acerca</a></li>
         <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Secciones para el menú -->
-  <main>
   <main>
     <section id="inicio">
       <h2>Bienvenida</h2>
-      <p>¡Bienvenido! En este proyecto mostramos el uso de APIs públicas y personalizadas para resolver problemas reales y explorar datos de manera interactiva.</p>
+      <p>¡Bienvenido al proyecto del <strong>Segundo Parcial de Sistemas Expertos</strong>! Aquí presentamos ejemplos prácticos del uso de APIs públicas y personalizadas para obtener, procesar y mostrar información en tiempo real.</p>
     </section>
 
-    <!-- Sección de perfiles al inicio -->
     <section id="perfiles">
       <h2>Integrantes</h2>
       <div class="perfiles">
@@ -64,108 +57,66 @@
       </div>
     </section>
 
-    <!-- Sección de APIs en tarjetas -->
     <section id="apis">
       <h2>APIs Creadas</h2>
       <div class="apis-section">
         <div class="api-card">
           <img src="imagenes/DOGAPI.png" alt="Dog API">
           <h3>Explorador de Razas de Perros</h3>
-          <p>Selecciona la raza y ve la imagen del perro usando la Dog API.</p>
+          <p>Visualiza imágenes de distintas razas utilizando la Dog API.</p>
           <a href="https://proyecto3parcial22025-bmcnzbhyajaciltnloyo3x.streamlit.app/" target="_blank">Ir a Dog API</a>
         </div>
+
         <div class="api-card">
           <img src="imagenes/POKEAPI.png" alt="PokéAPI">
           <h3>PokéAPI Explorer</h3>
-          <p>Explora información de Pokémon usando la PokéAPI y Streamlit.</p>
+          <p>Consulta datos detallados de Pokémon con la PokéAPI y Streamlit.</p>
           <a href="https://proyecto1parcial22025-fcprsaxaf48ndvf6mahrtt.streamlit.app/" target="_blank">Ir a PokéAPI</a>
         </div>
+
         <div class="api-card">
           <img src="imagenes/RICK AND MARTY.png" alt="Rick and Morty API">
-          <h3>Rick and Morty API</h3>
-          <p>Consulta personajes y episodios de Rick and Morty.</p>
+          <h3>Rick and Morty Explorer</h3>
+          <p>Descubre personajes y episodios con la Rick and Morty API.</p>
           <a href="https://hdmkdvhyezclxmcb8346ez.streamlit.app/" target="_blank">Ir a Rick and Morty API</a>
         </div>
       </div>
     </section>
 
-    <!-- Información y contacto -->
     <section id="acerca">
       <h2>¿Qué es una API?</h2>
-      <p>Una API (Interfaz de Programación de Aplicaciones) es un conjunto de reglas y protocolos que permite que dos aplicaciones se comuniquen y compartan información de forma eficiente, actuando como un "puente" o un "contrato" para la interacción de software. Las APIs permiten a los desarrolladores utilizar funcionalidades existentes en otras aplicaciones sin necesidad de crear código desde cero, simplificando el desarrollo y fomentando la innovación. Existen diferentes tipos de APIs, como las privadas (para uso interno), las de socios (para colaboradores externos) y las públicas (disponibles para todos), y son cruciales para la infraestructura moderna, como las aplicaciones móviles y la gestión en la nube.</p>
+      <p>Una <strong>API</strong> (Interfaz de Programación de Aplicaciones) es un conjunto de reglas que permite que dos aplicaciones se comuniquen entre sí. Facilita el intercambio de datos y la integración entre servicios, actuando como un puente que simplifica el desarrollo y fomenta la innovación en sistemas modernos.</p>
     </section>
+
     <section id="contacto">
       <h2>Contacto</h2>
-      <p>Contáctanos al correo: <a href="mailto:apis@unab.edu.sv">apis@unab.edu.sv</a></p>
+      <p>Para más información, contáctanos en: <a href="mailto:apis@unab.edu.sv">apis@unab.edu.sv</a></p>
     </section>
   </main>
 
-  <!-- Sección de perfiles al inicio -->
-  <section id="perfiles">
-    <h2>INTEGRANTES</h2>
-    <div class="perfiles">
-      <div class="perfil-card">
-        <div class="preview"><img id="preview1" src="imagenes/20250524_132220.jpg" alt="Silvia Raquel Ramos"></div>
-        <h3>Silvia Raquel Ramos</h3>
-        <input type="file" id="file1" accept="image/*">
-      </div>
-      <div class="perfil-card">
-        <div class="preview"><img id="preview2" src="imagenes/MARVIN.png" alt="Marvin Antonio Barrera"></div>
-        <h3>Marvin Antonio Barrera</h3>
-        <input type="file" id="file2" accept="image/*">
-      </div>
-    </div>
-  </section>
-
-  <!-- Sección de APIs en tarjetas -->
-  <section id="apis">
-    <h2>APIs Creadas</h2>
-    <div class="apis-section">
-      <div class="api-card">
-        <img src="imagenes/DOGAPI.png" alt="Dog API">
-        <h3>Explorador de Razas de Perros</h3>
-        <p>Selecciona la raza y ve la imagen del perro usando la Dog API.</p>
-        <a href="https://proyecto3parcial22025-bmcnzbhyajaciltnloyo3x.streamlit.app/" target="_blank">Ir a Dog API</a>
-      </div>
-      <div class="api-card">
-        <img src="imagenes/POKEAPI.png" alt="PokéAPI">
-        <h3>PokéAPI Explorer</h3>
-        <p>Explora información de Pokémon usando la PokéAPI y Streamlit.</p>
-        <a href="https://proyecto1parcial22025-fcprsaxaf48ndvf6mahrtt.streamlit.app/" target="_blank">Ir a PokéAPI</a>
-      </div>
-      <div class="api-card">
-        <img src="imagenes/RICK AND MARTY.png" alt="Rick and Morty API">
-        <h3>Rick and Morty API</h3>
-        <p>Consulta personajes y episodios de Rick and Morty.</p>
-        <a href="https://hdmkdvhyezclxmcb8346ez.streamlit.app/" target="_blank">Ir a Rick and Morty API</a>
-      </div>
-    </div>
-  </section>
-
-  
-  
+  <footer>
+    <p>© 2025 Proyecto de Sistemas Expertos - UNAB | Desarrollado por Silvia Raquel Ramos y Marvin Antonio Barrera</p>
+  </footer>
 
   <script>
-    // Vista previa de imágenes para los dos perfiles
+    // Vista previa de imágenes
     function previewFile(input, imgId) {
       const file = input.files[0];
       const img = document.getElementById(imgId);
       if (!file) return;
       const reader = new FileReader();
-      reader.onload = function(e) {
-        img.src = e.target.result;
-      };
+      reader.onload = e => img.src = e.target.result;
       reader.readAsDataURL(file);
     }
 
-    document.getElementById('file1').addEventListener('change', function(e){
-      e.stopPropagation();
+    document.getElementById('file1').addEventListener('change', function() {
       previewFile(this, 'preview1');
     });
-    document.getElementById('file2').addEventListener('change', function(e){
-      e.stopPropagation();
+    document.getElementById('file2').addEventListener('change', function() {
       previewFile(this, 'preview2');
     });
   </script>
+
 </body>
 </html>
+
