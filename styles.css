@@ -1,0 +1,63 @@
+/* styles.css - extraído desde index.html */
+:root{
+  --bg: #35e3f0;
+  --text: #15181a;
+  --muted: #84898d;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  text-align: center;
+  padding-top: 50px;
+  margin: 0;
+}
+h1 {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.header-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+nav {
+  margin-bottom: 30px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  gap: 20px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 18px;
+}
+nav ul li a:hover {
+  color: #1b1c1d;
+}
+/* Responsive small screens */
+@media (max-width: 480px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Menu debajo de la imagen */
+.below-image { margin-top: 12px; background: rgba(255,255,255,0.06); padding: 8px 0; }
+.below-image ul { display:inline-flex; gap:18px; }
+
+/* Perfiles */
+#perfiles { padding: 24px 16px; }
+.perfiles { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+.perfil-card { background: rgba(255,255,255,0.9); padding:14px; border-radius:8px; width:260px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
+.perfil-card .preview { width:96px; height:96px; margin:0 auto 8px; overflow:hidden; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; }
+.perfil-card .preview img { width:100%; height:100%; object-fit:cover; display:block; }
+.perfil-card input[type="file"] { margin-top:8px; }
+
+@media (max-width:600px){ .perfiles{flex-direction:column; align-items:center} .perfil-card{width:90%} }
