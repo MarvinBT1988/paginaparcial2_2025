@@ -24,39 +24,81 @@
 </head>
 <body>
 
-    <h1>SEGUNDO PARCIAL DE SISTEMAS EXPERTOS UTILIZANDO APIs</h1>
-  <!-- Imagen en el encabezado (más pequeña) -->
-  <img src="imagenes/benner.jpg" alt="Sistemas Expertos" class="header-img little-img">
-  <!-- Menú / Índice (debajo de la imagen) -->
-  <nav class="below-image">
-    <ul>
-      <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
-      <li><a href="#Dog API"><i class="fas fa-home"></i> Dog API</a></li>
-      <li><a href="#Poké API"><i class="fas fa-home"></i> Poké API</a></li>
-      <li><a href="#Rick and Morty"><i class="fas fa-home"></i> Rick and Marty</a></li>
-      <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
-      <li><a href="#acerca"><i class="fas fa-info-circle"></i> Acerca de</a></li>
-    </ul>
-  </nav>
+  <!-- Encabezado principal -->
+  <header>
+    <img src="imagenes/benner.jpg" alt="Sistemas Expertos" class="header-img little-img">
+    <h1>Segundo Parcial de Sistemas Expertos utilizando APIs</h1>
+    <nav class="below-image">
+      <ul>
+        <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="#perfiles"><i class="fas fa-users"></i> Integrantes</a></li>
+        <li><a href="#apis"><i class="fas fa-cogs"></i> APIs</a></li>
+        <li><a href="#acerca"><i class="fas fa-info-circle"></i> Acerca de</a></li>
+        <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Secciones para el menú -->
   <main>
-  <section id="inicio">
-    <h2>Inicio</h2>
-    <p>Utilizando APIs</p>
-  </section>
-  <section id="Dog API">
-    <h2>Dog API</h2>
-    <p>Utilizando APIs se constriyo una API que al seleccionar la raza de un perro y luego presionas el el boton de ver imagen, aparece o busca la imagen del perro segun la raza seleccionada</p>
-  </section>
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Contáctanos al correo: apis@unab.edu.sv</p>
-  </section>
-  <section id="acerca">
-    <h2>Acerca de</h2>
-    <p>Una API (Interfaz de Programación de Aplicaciones) es un conjunto de reglas y protocolos que permite que dos aplicaciones se comuniquen y compartan información de forma eficiente, actuando como un "puente" o un "contrato" para la interacción de software. En la tecnología, las APIs permiten a los desarrolladores utilizar funcionalidades existentes en otras aplicaciones sin necesidad de crear código desde cero, simplificando el desarrollo y fomentando la innovación. Existen diferentes tipos de APIs, como las privadas (para uso interno), las de socios (para colaboradores externos) y las públicas (disponibles para todos), y son cruciales para la infraestructura moderna, como las aplicaciones móviles y la gestión en la nube.</p>
-  </section>
+  <main>
+    <section id="inicio">
+      <h2>Bienvenida</h2>
+      <p>¡Bienvenido! En este proyecto mostramos el uso de APIs públicas y personalizadas para resolver problemas reales y explorar datos de manera interactiva.</p>
+    </section>
+
+    <!-- Sección de perfiles al inicio -->
+    <section id="perfiles">
+      <h2>Integrantes</h2>
+      <div class="perfiles">
+        <div class="perfil-card">
+          <div class="preview"><img id="preview1" src="imagenes/20250524_132220.jpg" alt="Silvia Raquel Ramos"></div>
+          <h3>Silvia Raquel Ramos</h3>
+          <input type="file" id="file1" accept="image/*">
+        </div>
+        <div class="perfil-card">
+          <div class="preview"><img id="preview2" src="imagenes/MARVIN.png" alt="Marvin Antonio Barrera"></div>
+          <h3>Marvin Antonio Barrera</h3>
+          <input type="file" id="file2" accept="image/*">
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de APIs en tarjetas -->
+    <section id="apis">
+      <h2>APIs Creadas</h2>
+      <div class="apis-section">
+        <div class="api-card">
+          <img src="imagenes/DOGAPI.png" alt="Dog API">
+          <h3>Explorador de Razas de Perros</h3>
+          <p>Selecciona la raza y ve la imagen del perro usando la Dog API.</p>
+          <a href="https://proyecto3parcial22025-bmcnzbhyajaciltnloyo3x.streamlit.app/" target="_blank">Ir a Dog API</a>
+        </div>
+        <div class="api-card">
+          <img src="imagenes/POKEAPI.png" alt="PokéAPI">
+          <h3>PokéAPI Explorer</h3>
+          <p>Explora información de Pokémon usando la PokéAPI y Streamlit.</p>
+          <a href="https://proyecto1parcial22025-fcprsaxaf48ndvf6mahrtt.streamlit.app/" target="_blank">Ir a PokéAPI</a>
+        </div>
+        <div class="api-card">
+          <img src="imagenes/RICK AND MARTY.png" alt="Rick and Morty API">
+          <h3>Rick and Morty API</h3>
+          <p>Consulta personajes y episodios de Rick and Morty.</p>
+          <a href="https://hdmkdvhyezclxmcb8346ez.streamlit.app/" target="_blank">Ir a Rick and Morty API</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Información y contacto -->
+    <section id="acerca">
+      <h2>¿Qué es una API?</h2>
+      <p>Una API (Interfaz de Programación de Aplicaciones) es un conjunto de reglas y protocolos que permite que dos aplicaciones se comuniquen y compartan información de forma eficiente, actuando como un "puente" o un "contrato" para la interacción de software. Las APIs permiten a los desarrolladores utilizar funcionalidades existentes en otras aplicaciones sin necesidad de crear código desde cero, simplificando el desarrollo y fomentando la innovación. Existen diferentes tipos de APIs, como las privadas (para uso interno), las de socios (para colaboradores externos) y las públicas (disponibles para todos), y son cruciales para la infraestructura moderna, como las aplicaciones móviles y la gestión en la nube.</p>
+    </section>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Contáctanos al correo: <a href="mailto:apis@unab.edu.sv">apis@unab.edu.sv</a></p>
+    </section>
+  </main>
 
   <!-- Sección de perfiles al inicio -->
   <section id="perfiles">
